@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "fitnessTracker"
+  "defaultProject": "fitnessTracker",
+  "cli": {
+    "analytics": false
+  }
 }
