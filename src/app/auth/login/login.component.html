@@ -6,11 +6,11 @@
     fxLayoutGap="10px"
     (ngSubmit)="onSubmit($event)"
   >
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <input
         type="email"
         matInput
-        placeholder="your email"
+        placeholder="your email *"
         name="email"
         formControlName="emailInput"
         >
@@ -18,11 +18,11 @@
       <mat-error *ngIf="!loginForm.hasError('required')">E-Mail is invalid.</mat-error>
     </mat-form-field>
 <!--    <span *ngIf="!loginForm.get('emailInput').valid && loginForm.get('emailInput').touched" class="help-block">Please enter a valid email</span>-->
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <input
         type="password"
         matInput
-        placeholder="your password"
+        placeholder="your password *"
         formControlName="password"
         name="password"
         minlength="6"
