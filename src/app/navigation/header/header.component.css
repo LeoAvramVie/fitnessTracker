@@ -1,0 +1,21 @@
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active{
+  color: lightgray;
+}
+.logo{
+  height: 40px;
+  width: 40px;
+  padding-left: 25px;
+}
+.navigation-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Light";
+}
+
