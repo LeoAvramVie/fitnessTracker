@@ -6,8 +6,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html,body{
-  font-family: 'Roboto', sans-serif;
   height: 100%;
+  font-family: "Roboto Thin", sans-serif !important;
 }
 
 body{
