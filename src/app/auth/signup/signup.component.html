@@ -1,47 +1,49 @@
-<section class="signup-form">
-  <form fxLayout="column"  fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <mat-form-field appearance="fill">
-      <input
-        type="email"
-        matInput
-        placeholder="your email"
-        ngModel
-        name="email"
-        email
-        required
-        #emailInput ="ngModel">
-      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty</mat-error>
-      <mat-error *ngIf="!emailInput.hasError('required')">E-Mail is invalid.</mat-error>
-    </mat-form-field>
-    <mat-form-field hintLabel="Should be at least 6 characters long" appearance="fill">
-      <input
-        type="password"
-        matInput
-        placeholder="your password"
-        ngModel
-        name="password"
-        required
-        minlength="6"
-        #pwInput="ngModel">
-      <mat-error>Field must not be empty</mat-error>
+<section class="signup-form" fxLayout fxLayoutAlign="center">
+  <mat-card class="mat-elevation-z8">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-form-field appearance="fill">
+        <input
+          type="email"
+          matInput
+          placeholder="your email"
+          ngModel
+          name="email"
+          email
+          required
+          #emailInput="ngModel">
+        <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty</mat-error>
+        <mat-error *ngIf="!emailInput.hasError('required')">E-Mail is invalid.</mat-error>
+      </mat-form-field>
+      <mat-form-field hintLabel="Should be at least 6 characters long" appearance="fill">
+        <input
+          type="password"
+          matInput
+          placeholder="your password"
+          ngModel
+          name="password"
+          required
+          minlength="6"
+          #pwInput="ngModel">
+        <mat-error>Field must not be empty</mat-error>
         <mat-hint align="end"> {{ pwInput.value?.length }} / 6</mat-hint>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <input
-        matInput
-        placeholder="Your birthdate"
-        [matDatepicker]="picker"
-        [max]="maxDate"
-        ngModel name="birthday">
-      <mat-datepicker-toggle
-        matSuffix
-        [for]="picker">
-      </mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-      <mat-checkbox ngModel name="agree" required color="primary">Agree to Terms and Conditions. </mat-checkbox>
-    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
-  </form>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input
+          matInput
+          placeholder="Your birthdate"
+          [matDatepicker]="picker"
+          [max]="maxDate"
+          ngModel name="birthday">
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker">
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-checkbox ngModel name="agree" required color="primary">Agree to Terms and Conditions.</mat-checkbox>
+      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
+    </form>
+  </mat-card>
 </section>
 
 
