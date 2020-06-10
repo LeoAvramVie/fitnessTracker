@@ -19,12 +19,11 @@ export class LoginComponent implements OnInit {
     this.loginForm = new FormGroup({
       emailInput: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, Validators.required)
-  })
+    })
     ;
   }
 
   onSubmit(form: NgForm) {
-    console.log(this.loginForm);
     this.authService.login({
       email: this.loginForm.value.emailInput,
       password: this.loginForm.value.password
