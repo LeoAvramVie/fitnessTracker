@@ -41,7 +41,8 @@ export class AuthService {
   isAuth() {
     return this.user !== null;
   }
-  private authSuccessfully(){
+
+  private authSuccessfully() {
     this.authChange.next(true);
     this.router.navigate(['/training']);
   }
