@@ -83,5 +83,5 @@ export class TrainingService {
     this.db.collection('finishedExercises').add(exercise);
 
   }
-
+//test
 }
