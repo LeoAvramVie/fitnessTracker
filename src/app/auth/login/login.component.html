@@ -15,6 +15,7 @@
           name="email"
           formControlName="emailInput"
         >
+        <mat-hint>Please enter your email adress</mat-hint>
         <mat-error *ngIf="loginForm.hasError('required')">Field must not be empty</mat-error>
         <mat-error *ngIf="!loginForm.hasError('required')">E-Mail is invalid.</mat-error>
       </mat-form-field>
@@ -28,10 +29,11 @@
           name="password"
           minlength="6"
         >
+        <mat-hint>Please enter your password</mat-hint>
         <mat-error>Field must not be empty</mat-error>
       </mat-form-field>
-      <button *ngIf="!isLoading" type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
-      <mat-spinner *ngIf="isLoading"></mat-spinner>
+      <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
+      <mat-spinner *ngIf="isLoading$ | async "></mat-spinner>
     </form>
   </mat-card>
 </section>
