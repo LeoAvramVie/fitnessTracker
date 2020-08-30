@@ -3,7 +3,6 @@ import {ActivatedRouteSnapshot, CanActivate, CanLoad, Route, Router, RouterState
 import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../app.reducer';
-import {take} from 'rxjs/operators';
 
 @Injectable()
 export class AuthGuard implements CanActivate, CanLoad {
