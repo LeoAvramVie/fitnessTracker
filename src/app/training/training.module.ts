@@ -26,3 +26,7 @@ import {TrainingRouterModule} from './training-router.module';
 export class TrainingModule {
 
 }
+
+
+
+//test
