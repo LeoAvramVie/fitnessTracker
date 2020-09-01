@@ -49,4 +49,6 @@ export class CurrentTrainingComponent implements OnInit {
       }
     });
   }
+
+
 }
