@@ -97,4 +97,8 @@ export class TrainingService {
     this.db.collection('finishedExercises').add(exercise);
 
   }
+<<<<<<< HEAD
+=======
+//test
+>>>>>>> parent of 1ec9d9e... test subbranch
 }
