@@ -12,11 +12,8 @@ import * as fromTraining from './training.reducer';
 @Injectable()
 export class TrainingService {
 
-  exerciseChanged = new Subject<Exercise>();
   exercisesChanged = new Subject<Exercise[]>();
   finishedExercisesChanged = new Subject<Exercise[]>();
-  private availableExercises: Exercise[] = [];
-  private runningExercise: Exercise;
   private fbSubs: Subscription[] = [];
 
   constructor(private db: AngularFirestore,
@@ -72,7 +69,7 @@ export class TrainingService {
         duration: ex.duration * (progress / 100),
         calories: ex.calories * (progress / 100),
         date: new Date(),
-        state: 'completed'
+        state: 'cancelled'
       });
       this.store.dispatch(new Training.StopTraining());
     });

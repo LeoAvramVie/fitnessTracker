@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../auth/auth.service';
-import {Observable, Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../../app.reducer';
 
@@ -13,7 +13,6 @@ import * as fromRoot from '../../app.reducer';
 export class SidenavListComponent implements OnInit {
 
   isAuth$: Observable<boolean>;
-  authSubscription: Subscription;
 
   constructor(private authService: AuthService,
               private store: Store<fromRoot.State>) {
